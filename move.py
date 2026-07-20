@@ -24,12 +24,12 @@ else:
     for file in files:
         sources = os.path.join(folder, file)
     #----musics----
-        if file.endswith((".mp3", ".m4a", ".wav", ".acc", "flac", ".ogg", ".wma")):
+        if file.endswith((".mp3", ".m4a", ".wav", ".acc", ".flac", ".ogg", ".wma")):
             if not os.path.exists(os.path.join(folder, "Music")):
                 os.mkdir(os.path.join(folder, "Music"))
             shutil.move(sources, os.path.join(folder, "Music"))
             music +=1
-        elif file.endswith((".mp4", ".mkv", ".lrc", ".mov", ".wmv", ".flv", "webm", "mpeg", "3gp")):
+        elif file.endswith((".mp4", ".mkv", ".lrc", ".mov", ".wmv", ".flv", ".webm", ".mpeg", ".3gp")):
             if not os.path.exists(os.path.join(folder, "Videos")):
                 os.mkdir(os.path.join(folder, "Videos"))
             shutil.move(sources, os.path.join(folder, "Videos"))
@@ -63,7 +63,7 @@ else:
             shutil.move(sources, os.path.join(folder, "Excel"))
             Excel +=1
     #----power_point----
-        elif file.endswith(("pptx", "ppt")):
+        elif file.endswith((".pptx", ".ppt")):
             if not os.path.exists(os.path.join(folder, "Power_point")):
                 os.mkdir(os.path.join(folder, "Power_point"))
             shutil.move(sources, os.path.join(folder, "Power_point"))
@@ -87,7 +87,7 @@ else:
             shutil.move(sources, os.path.join(folder, "Disk_images"))
             Di +=1
     #-----web files-----
-        elif file.endswith(( ".html", ".css", "js", "json", "xml")):
+        elif file.endswith(( ".html", ".css", ".js", ".json", ".xml")):
             if not os.path.exists(os.path.join(folder, "web_file")):
                 os.mkdir(os.path.join(folder, "web_file"))
             shutil.move(sources, os.path.join(folder, "web_file"))
