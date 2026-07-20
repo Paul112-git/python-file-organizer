@@ -69,19 +69,19 @@ else:
             shutil.move(sources, os.path.join(folder, "Power_point"))
             pp +=1
     #----python_files----
-        elif file.endswith(( ".pyw", ".py")):
+        elif file.endswith((".pyw", ".py")):
             if not os.path.exists(os.path.join(folder, "Python_files")):
                 os.mkdir(os.path.join(folder, "Python_files"))
             shutil.move(sources, os.path.join(folder, "Python_files"))
             pf +=1
     #----android----
-        elif file.endswith(( ".pdf")):
+        elif file.endswith(".apk"):
             if not os.path.exists(os.path.join(folder, "Android_app")):
                 os.mkdir(os.path.join(folder, "Android_app"))
             shutil.move(sources, os.path.join(folder, "Android_app"))
             ap +=1
     #----disk images----
-        elif file.endswith(( ".iso")):
+        elif file.endswith(".iso"):
             if not os.path.exists(os.path.join(folder, "Disk_images")):
                 os.mkdir(os.path.join(folder, "Disk_images"))
             shutil.move(sources, os.path.join(folder, "Disk_images"))
@@ -99,7 +99,7 @@ else:
             shutil.move(sources, os.path.join(folder, "Programs"))
             programs+=1
        
-total = photo + music + videos + Archives + ap + Di + programs + Documents + pf + pp + wf
+total = photo + music + videos + Archives + ap + Di + programs + Documents + pf + pp + wf + Excel
 print (f"Moved {photo} to photos") 
 print (f"Moved {videos} to videos") 
 print (f"Moved {music} to musics") 
@@ -111,6 +111,7 @@ print (f"Moved {Di} to Disk_images")
 print (f"Moved {programs} to programs")
 print (f"Moved {ap} to Android_apps")
 print (f"Moved {pp} to Power_points")
+print (f"Moved {Excel} to Excel")
 print (f"total: {total}")
 
 print ("Done!")
